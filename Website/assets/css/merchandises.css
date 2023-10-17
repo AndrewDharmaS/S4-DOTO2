@@ -1,0 +1,137 @@
+
+.merchandise {
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 25px;
+    color: var(--white);
+}
+.merchandise > .title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 72px;
+}
+.merchandise > .sub-title {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 24px;
+}
+.merchandise > .all-merchandise {
+    width: 100%;
+    margin-bottom: 100px;
+}
+.merchandise > .all-merchandise .collection {
+    padding-top: 100px;
+    width: 100%;
+}
+.merchandise > .all-merchandise .collection > .title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.merchandise > .all-merchandise .collection > .item-container {
+    width: 100%;
+    display: flex;
+}
+.merchandise > .all-merchandise .collection > .item-container > .item {
+    width: 100%;
+    position: relative;
+    background: var(--white);
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 20px;
+    transition: 0.1s ease;
+    filter: drop-shadow(0px 0px 10px #222);
+    cursor: pointer;
+}
+.merchandise > .all-merchandise .collection > .item-container > .item:hover {
+    transition: 0.1s ease;
+    z-index: 1;
+    transform: scale(1.1);
+}
+.merchandise > .all-merchandise .collection > .item-container > .item img {
+    width: 100%;
+    border-radius: 20px;
+    height: auto;
+    margin: auto;
+}
+.merchandise > .all-merchandise .collection > .item-container > .item .description {
+    color: var(--black);
+    text-align: center;
+    font-size: 20px;
+    padding-top: 20px;
+}
+.merchandise > .all-merchandise .collection > .item-container > .item .description > .name {
+    font-weight: 700;
+}
+@media screen and (max-width: 800px) {
+    .merchandise {
+        width: 600px;
+    }
+    .merchandise > .all-merchandise {
+        margin-bottom: 50px;
+    }
+    .merchandise > .title {
+        font-size: 52px;
+    }
+    .merchandise > .sub-title {
+        font-size: 20px;
+    }
+    .merchandise > .all-merchandise .collection {
+        padding-top: 50px;
+    }
+    .merchandise > .all-merchandise .collection > .title {
+        font-size: 36px;
+    }
+    .merchandise > .all-merchandise .collection > .item-container > .item {
+        padding: 10px;
+        margin: 0 8px;
+    }
+    .merchandise > .all-merchandise .collection > .item-container > .item .description {
+        font-size: 18px;
+    }
+    .merchandise > .sub-title {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        padding-top: 250px;
+    }
+    .merchandise {
+        width: 100vw;
+    }
+    .merchandise > .title {
+        font-size: 9.5vw;
+    }
+    .merchandise > .sub-title {
+        font-size: 5vw;
+    }
+    .merchandise > .all-merchandise .collection {
+        padding-top: 50px;
+    }
+    .merchandise > .all-merchandise .collection > .title {
+        font-size: 7vw;
+        margin-bottom: 10px;
+    }
+    .merchandise > .all-merchandise .collection > .item-container {
+        flex-wrap: wrap;
+    }
+    .merchandise > .all-merchandise .collection > .item-container > .item {
+        width: 33%;
+        margin: 25px auto;
+        padding: 10px;
+    }
+    .merchandise > .all-merchandise .collection > .item-container > .item .description {
+        padding-top: 10px;
+    }
+    .merchandise > .all-merchandise .collection > .item-container > .item .description {
+        font-size: 3.5vw;
+    }
+}

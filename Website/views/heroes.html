@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doto 2</title>
+    <link rel="icon" href="../assets/image/logo (icon).ico">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/heroes.css">
+    <script src="../assets/js/jquery.js"></script>
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar limiter">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/image/logo.png" alt="Doto 2"></a>
+            </div>
+            <div class="nav active"><a href="heroes.html">Heroes</a></div>
+            <div class="nav"><a href="mechanics.html">Game Mechanics</a></div>
+            <div class="nav dropdown activate">
+                <a href="merchandises.html">Merchandises</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#shirt">- Shirt</a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#mousepad">- Mousepad</a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#other">- Others</a>
+                    </div>
+                </div>
+            </div>
+            <div class="click-here">
+                <a href="register.html">Register Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="content limiter">
+            <div class="modal" id="info-modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="information">
+                        <div id="info-image">
+                            
+                        </div>
+                        <div id="info-name">
+
+                        </div>
+                        <div class="hero-skills">
+                            <div class="section">
+                                Unique Skill
+                            </div>
+                            <div class="skills">
+                                <div id="info-skill-image">
+
+                                </div>
+                                <div class="info-skill">
+                                    <div id="info-skill-name">
+
+                                    </div>
+                                    <div id="info-skill-description">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hero-description">
+                            <div class="section">
+                                Lore
+                            </div>
+                            <div id="info-description">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="title-container">
+                <div class="title">
+                    PICK YOUR HERO
+                </div>
+                <div class="sub-title">
+                    Become tacticians, warriors, marksmans, assassins, strategists, supports, and others role you can take. 
+                </div>
+            </div>
+            <div class="heroes-grid" id="grid">
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer limiter">
+            &copy; Doto 2 2020
+        </div>
+    </div>
+</body>
+</html>
+<script src="../assets/js/heroes.js"></script>

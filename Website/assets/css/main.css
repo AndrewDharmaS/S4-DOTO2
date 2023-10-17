@@ -1,0 +1,226 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 60%, rgba(100,0,0,1) 100%);
+    background-repeat: no-repeat;
+}
+:root {
+    --dark-red: rgb(175, 0, 0);
+    --light-red: rgb(200, 0, 0);
+    --white: #eee;
+    --black: #222;
+    --linear-black-red: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 60%, rgba(100,0,0,1) 100%);
+    --linear-paper: linear-gradient(121deg, rgba(255,244,205,1) 0%, rgba(255,207,149,1) 19%, rgba(249,235,189,1) 27%, rgba(255,220,188,1) 50%, rgba(226,183,145,1) 73%, rgba(255,211,175,1) 100%);
+}
+::-webkit-scrollbar-thumb {
+    background: #aaa; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--white); 
+}
+.navbar {
+    border-bottom: 2px solid var(--white);
+}
+.dark-red {
+    color: var(--dark-red);
+}
+.light-red {
+    color: var(--light-red);
+}
+.hidden {
+    display: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+.limiter {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+}
+
+.navbar-container {
+    width: 100%;
+    /* background-color: #222; */
+    background: var(--linear-black-red);
+    position: fixed;
+    display: block;
+    top: 0;
+    z-index: 10;
+}
+.navbar {
+    border-bottom: 2px solid var(--white);
+    display: flex;
+    width: 100%;
+    height: 100px;
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+.navbar .active {
+    color: var(--light-red);
+}
+.navbar a {
+    transition: 0.2s ease;
+}
+.navbar a:hover {
+    filter: brightness(1.2);
+    color: var(--light-red);
+    transition: 0.2s ease;
+}
+.navbar > .logo {
+    width: 75px;
+    padding: 0 20px;
+    height: auto;
+    margin: auto 0;
+}
+.navbar > .logo img {
+    height: auto;
+    width: 100%
+}
+.navbar .nav {
+    margin: auto 0;
+    padding: 0 20px;
+}
+.navbar .dropdown {
+    position: relative;
+    border-radius: 10px;
+}
+.navbar .dropdown:hover,
+.navbar .dropdown:focus {
+    color: var(--light-red);
+    background-color: var(--white);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.navbar .dropdown:hover > .dropdown-content,
+.navbar .dropdown:focus > .dropdown-content {
+    display: block;
+    transition: 0.2s ease;
+}
+.navbar .dropdown > .dropdown-content {
+    display: none;
+    color: var(--black);
+    background-color: var(--white);
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.2s ease;
+}
+.navbar .dropdown > .dropdown-content > .dropdown-item {
+    padding: 0px;
+    transition: 0.2s ease;
+}
+.navbar .dropdown > .dropdown-content > .dropdown-item:hover {
+    color: var(--light-red);
+    transition: 0.2s ease;
+}
+.navbar > .click-here {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px;
+}
+.navbar > .click-here a {
+    color: var(--white);
+    padding: 20px 25px;
+    border-radius: 50px;
+    background-color: var(--dark-red);
+}
+.navbar > .clicked {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0 20px;
+}
+.navbar > .clicked a {
+    color: var(--dark-red);
+    padding: 20px 25px;
+    border-radius: 50px;
+    background-color: var(--white);
+}
+.content-container {
+    background: var(--linear-black-red);
+}
+.content {
+    padding-top: 150px;
+}
+.footer-container {
+    background: var(--linear-black-red);
+    text-align: center;
+}
+.footer {
+    color: var(--white);
+    font-size: 20px;
+    padding: 20px 0; 
+}
+
+@media screen and (max-width: 800px) {
+    .limiter {
+        max-width: 800px;
+    }
+    .navbar {
+        font-size: 16px;
+    }
+    .navbar .nav {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .limiter {
+        max-width: 500px;
+    }
+    .navbar {
+        padding: 15px 0;
+        display: block;
+        font-size: 12px;
+        height: 200px;
+    }
+    .navbar > .logo {
+        margin: 0 auto;
+    }
+    .navbar .nav {
+        padding: 5px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar > .click-here {
+        padding: 10px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar > .click-here a {
+        padding: 10px 15px;
+    }
+    .navbar > .clicked {
+        padding: 10px 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .navbar > .clicked a {
+        padding: 10px 15px;
+    }
+}

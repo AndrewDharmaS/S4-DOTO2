@@ -1,0 +1,101 @@
+
+.mechanics {
+    width: 1000px;
+    margin: 0 auto;
+    border-radius: 25px;
+    color: var(--white);
+}
+.mechanics > .title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 72px;
+}
+.mechanics > .sub-title {
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 24px;
+}
+.mechanics > .basic-mechanics {
+    margin-top: 50px;
+}
+.mechanics > .basic-mechanics .title {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mechanics > .basic-mechanics .explanation {
+    margin-bottom: 100px;
+}
+.mechanics > .basic-mechanics .explanation > .image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    margin-bottom: 20px;
+}
+.mechanics > .basic-mechanics .explanation > .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 50px;
+    border: 3px solid var(--white);
+    box-shadow: 0px 0px 100px 5px rgba(255,255,255,0.1);
+}
+.mechanics > .basic-mechanics .explanation > .description {
+    font-size: 20px;
+    text-align: justify;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+    .mechanics {
+        width: 600px;
+    }
+    .mechanics > .title {
+        font-size: 52px;
+    }
+    .mechanics > .sub-title {
+        font-size: 20px;
+    }
+    .mechanics > .basic-mechanics {
+        margin-top: 25px;
+    }
+    .mechanics > .basic-mechanics .explanation > .description {
+        font-size: 18px;
+    }
+    .mechanics > .basic-mechanics .explanation {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .content {
+        padding-top: 250px;
+    }
+    .mechanics {
+        width: 100vw;
+    }
+    .mechanics > .title {
+        font-size: 9.5vw;
+    }
+    .mechanics > .sub-title {
+        font-size: 4.5vw;
+        padding: 0 25px;
+        width: auto;
+    }
+    .mechanics > .basic-mechanics .title {
+        font-size: 8vw;
+    }
+    .mechanics > .basic-mechanics .explanation > .image {
+        width: 80%;
+    }
+    .mechanics > .basic-mechanics .explanation > .description {
+        width: 90%;
+        font-size: 5vw;
+    }
+}

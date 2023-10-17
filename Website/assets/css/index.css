@@ -1,0 +1,169 @@
+
+.content {
+    padding-top: 200px;
+}
+.home {
+    width: 1280px;
+    margin: 0 auto;
+    border-radius: 25px;
+    color: var(--white);
+}
+.home > .welcome {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    cursor: default;
+}
+.home > .welcome img {
+    width: 100%;
+    height: auto;
+}
+.home > .welcome .greet {
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    position: absolute;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.home > .welcome .promote {
+    font-size: 24px;
+}
+.home > .game-overview {
+    margin-bottom: 100px;
+}
+.home > .game-overview .title {
+    margin-top: 84px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--white);
+    background: var(--dark-red);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+#slider-limiter {
+    overflow: hidden;
+    width: 1280;
+    height: 720px;
+    position: relative;
+}
+#slider-container {
+    display: flex;
+    position: relative;
+    transition: 0.5s;
+    flex-wrap: nowrap;
+}
+#slider-container img {
+    width: 1280px;
+    height: 720px;
+}
+#prev, #next {
+    position: absolute;
+    top: 50%;
+    border: 0;
+    background: transparent;
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 0;
+    transition: 0.1s ease;
+    cursor: pointer;
+}
+#prev:hover, #next:hover {
+    transform: scale(1.1);
+    transition: 0.1s ease;
+}
+#prev {
+    left: 5%;
+}
+#next {
+    right: 5%;
+}
+.home > .game-overview .invitation {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.home > .game-overview .invitation:hover .invite {
+    color: var(--dark-red);
+    background-color: var(--white);
+    transition: 0.3s ease;
+}
+.home > .game-overview .invitation .invite {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+    color: var(--white);
+    background-color: var(--dark-red);
+    font-size: 20px;
+    font-weight: 700;
+    transition: 0.3s ease;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+@media screen and (max-width: 800px) {
+    .home {
+        width: 600px;
+    }
+    .content {
+        padding-top: 150px;
+    }
+    .home > .welcome .greet {
+        font-size: 48px;
+    }
+    .home > .game-overview .title {
+        font-size: 24px;
+    }
+    #slider-limiter {
+        width: 600px;
+        height: 337.5px;
+    }
+    #slider-container img {
+        width: 600px;
+        height: 337.5px;
+    }
+    .home > .game-overview {
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .home {
+        width: 100vw;
+    }
+    .content {
+        padding-top: 250px;
+    }
+    .home > .welcome .greet {
+        font-size: 7vw;
+    }
+    .home > .welcome .promote {
+        font-size: 16px;
+    }
+    .home > .game-overview .title {
+        font-size: 20px;
+    }
+    #slider-limiter {
+        width: 100vw;
+        height: 56.25vw;
+    }
+    #slider-container img {
+        width: 100vw;
+        height: 56.25vw;
+    }
+    .home > .game-overview {
+        margin-bottom: 50px;
+    }
+    .home > .game-overview .title {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .home > .game-overview .invitation .invite {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}

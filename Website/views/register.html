@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doto 2</title>
+    <link rel="icon" href="../assets/image/logo (icon).ico">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/register.css">
+</head>
+<body>
+    <div class="navbar-container">
+        <div class="navbar limiter">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/image/logo.png" alt="Doto 2"></a>
+            </div>
+            <div class="nav"><a href="heroes.html">Heroes</a></div>
+            <div class="nav"><a href="mechanics.html">Game Mechanics</a></div>
+            <div class="nav dropdown">
+                <a href="merchandises.html">Merchandises</a>
+                <div class="dropdown-content">
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#shirt">- Shirt</a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#mousepad">- Mousepad</a>
+                    </div>
+                    <div class="dropdown-item">
+                        <a href="merchandises.html#other">- Others</a>
+                    </div>
+                </div>
+            </div>
+            <div class="clicked">
+                <a href="register.html">Register Now</a>
+            </div>
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="content limiter">
+            <script type="text/javascript" src="../assets/js/register_validate.js"></script>
+            <div class="registration-form">
+                <div class="title">Registration Form</div>
+                <form action="" name="registerForm" onsubmit="validation(event)">
+                    <div class="input-container">
+                        <label>Username</label>
+                        <input type="text" maxlength="255" name="username" id="username" placeholder="At least 4 characters">
+                    </div>
+                    <div class="input-container">
+                        <label>Password</label>
+                        <input type="password" maxlength="255" name="password" id="password" placeholder="At least 4 characters & Alphanumeric">
+                    </div>
+                    <div class="input-container">
+                        <label>Email</label>
+                        <input type="email" maxlength="255" name="email" id="email" placeholder="ex. john@gmail.com">
+                    </div>
+                    <div class="input-container">
+                        <label>Region</label>
+                        <select name="region" id="region">
+                            <option value="AS">Asia</option>
+                            <option value="AF">Africa</option>
+                            <option value="AN">Antartica</option>
+                            <option value="AU">Australia</option>
+                            <option value="EU">Europe</option>
+                            <option value="NA">North America</option>
+                            <option value="SA">South America</option>
+                        </select>
+                    </div>
+                    <div class="input-container">
+                        <label>Date of Birth</label>
+                        <input type="date" name="dob" id="dob">
+                    </div>
+                    <input type="submit" value="Register" class="confirm">
+                    <div class="error-field">
+                        <div id="error">
+                            <br>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer limiter">
+            &copy; Doto 2 2021
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,304 @@
+
+.content {
+    padding-left: 250px;
+    padding-right: 250px;
+}
+.heroes-grid {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+.heroes-grid > .hero {
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+    filter: drop-shadow(0px 0px 10px #222);
+}
+.heroes-grid > .hero a {
+    display: block;
+}
+.heroes-grid > .hero > a img {
+    width: 100%;
+    height: auto;
+    transition: 0.1s ease;
+    backface-visibility: hidden;
+}
+.heroes-grid > .hero > a:hover {
+    transition: 0.1s all;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.heroes-grid > .hero > a:hover img {
+    filter: brightness(0.8);
+}
+.heroes-grid > .hero > a .name {
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    transition: 0.2s ease;
+}
+.heroes-grid > .hero > a:hover .name {
+    opacity: 1;
+}
+.title-container {
+    color: var(--white);
+    text-align: center;
+    padding: 0 200px;
+    margin-bottom: 50px;
+}
+.title-container > .title {
+    font-size: 72px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.title-container > .sub-title {
+    font-size: 24px;
+}
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: none;
+}
+
+.modal-content {
+    width: 800px;
+    height: 800px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: var(--linear-paper);
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.5) inset;
+}
+.close {
+    margin-right: 20px;
+    color: var(--black);
+    font-size: 32px;
+    font-weight: 700;
+    float: right;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+.close:hover {
+    text-decoration: none;
+    filter: brightness(2);
+    transition: 0.1s ease;
+}
+
+.section {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#info-modal {
+    overflow: hidden;
+}
+#info-image {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+#info-image img {
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.25);
+    border: 5px double  var(--black);
+    width: 100%;
+    height: auto;
+}
+#info-name {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+}
+.hero-skills .skills {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 0 25px;
+}
+.hero-skills .skills .info-skill {
+    margin-right: auto;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#info-skill-name {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 3px;
+}
+#info-skill-image {
+    width: 150px;
+    margin-left: auto;
+}
+#info-skill-image img {
+    box-shadow: 0px 0px 50px 10px rgba(0,0,0,0.25);
+    border: 2px solid var(--black);
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+#info-skill-description {
+    font-size: 20px;
+    text-align: justify;
+    width: 600px;
+}
+#info-description {
+    overflow-y: scroll;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+    font-size: 20px;
+    text-align: justify;
+}
+@media screen and (max-width: 800px) {
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .modal-content {
+        width: 600px;
+        height: 600px;
+    }
+    #info-image {
+        height: 200px;
+    }
+    #info-image img {
+        height: 100%;
+        width: auto;
+    }
+    .title-container {
+        padding: 0 100px;
+        margin-bottom: 25px;
+    }
+    .title-container > .title {
+        font-size: 52px;
+    }
+    .title-container > .sub-title {
+        font-size: 20px;
+    }
+    #info-name {
+        font-size: 40px;
+    }
+    .section {
+        font-size: 28px;
+    }
+    .hero-skills {
+        min-height: 180px;
+    }
+    #info-skill-name {
+        font-size: 20px;
+    }
+    #info-skill-description {
+        font-size: 18px;
+        width: 450px;
+    }
+    #info-description {
+        font-size: 18px;
+        height: 120px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .content {
+        padding-top: 250px;
+    }
+    .title-container > .title {
+        font-size: 9.5vw;
+    }
+    .title-container > .sub-title {
+        font-size: 4.5vw;
+        padding: 0 25px;
+    }
+    .title-container {
+        padding: 0;
+    }
+    .heroes-grid {
+        padding-left: 25px;
+        padding-right: 25px;
+        grid-template-columns: auto auto;
+    }
+    .heroes-grid > .hero > a .name {
+        font-size: 12px;
+    }
+    #info-modal {
+        overflow-y: scroll;
+    }
+    .modal-content {
+        width: 100vw;
+        height: auto;
+        margin: auto;
+        padding: 0;
+        border-radius: 0;
+        padding-bottom: 20px;
+    }
+    .close {
+        margin-right: 10px;
+    }
+    #info-image {
+        padding-top: 40px;
+        width: 75vw;
+        height: auto;
+    }
+    #info-description {
+        overflow-y: auto;
+        width: fit-content;
+        padding: 0 20px;
+    }
+    #info-image img {
+        width: 100%;
+        height: auto;
+    }
+    #info-name {
+        font-size: 10vw;
+    }
+    .section {
+        font-size: 6vw;
+    }
+    .hero-skills {
+        min-height: 180px;
+    }
+    .hero-skills .skills {
+        padding: 0;
+        display: block;
+    }
+    .hero-skills .skills .info-skill {
+        margin-left: auto;
+    }
+    #info-skill-image {
+        width: 25vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    #info-skill-name {
+        font-size: 6vw;
+        text-align: center;
+    }
+    #info-skill-description {
+        font-size: 5vw;
+        width: 80vw;
+        margin: 0 auto;
+    }
+    #info-description {
+        font-size: 18px;
+        height: 100%;
+    }
+}
